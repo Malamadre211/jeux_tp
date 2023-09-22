@@ -1,4 +1,4 @@
-import { Viking } from "./Viking";
+import { Viking } from "./characterType/Viking";
 
 export class Combat {
 

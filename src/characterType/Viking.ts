@@ -1,6 +1,6 @@
-// import { timeStamp } from "console";
-// import { Arme } from "./Arme";
-import { CharacterType } from "./characterType";
+import { timeStamp } from "console";
+import { Arme } from "../Arme";
+import { CharacterType } from "../characterType";
 
 // export class OldViking {
 
@@ -27,7 +27,7 @@ import { CharacterType } from "./characterType";
 //         this.defense = defense
 //     }
 
-//     public fight(otherViking: Viking) {
+//     public fight(otherViking: OldViking) {
 //         const attackValue = this.getAttackValue()
 //         const soinsValue = this.getHealedValueFromAttaque(attackValue)
 //         otherViking.receiveAttack(attackValue)
@@ -74,7 +74,7 @@ import { CharacterType } from "./characterType";
 // }
 
 export class Viking extends  CharacterType {
-    
+     
 constructor(){
     super('Viking', 'Vol de vie', 25, 4, 2, 0, 0, 0.08)
 }
