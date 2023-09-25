@@ -1,32 +1,29 @@
 export class CharacterType {
-    private _characterName: string 
-    private _specialCapacity: string
-    private _extraLife: number 
-    private _extraForce: number 
-    private _extraSpeed: number 
-    private _extraIntelligence: number 
-    private _extraMana: number 
-    private _extraCriticalStrike: number 
+    private _characterName: string = ""
+    private _extraLife: number = 0
+    private _extraForce: number = 0
+    private _extraSpeed: number = 0 
+    private _extraIntelligence: number = 0
+    private _extraMana: number = 0
+    private _extraCriticalStrike: number = 0
 
     
     constructor (
-        _characterName: string, 
-        _specialCapacity : string,
-        _extraLife: number,
-        _extraForce: number,
-        _extraSpeed : number,
-        _extraIntelligence : number,
-        _extraMana : number,
-        _extraCriticalStrike : number 
+        characterName: string, 
+        extraLife: number,
+        extraForce: number,
+        extraSpeed : number,
+        extraIntelligence : number,
+        extraMana : number,
+        extraCriticalStrike : number 
         ) {
-            this._characterName = ''
-            this._specialCapacity = ''
-            this._extraLife = _extraLife
-            this._extraForce = _extraForce
-            this._extraSpeed = _extraSpeed
-            this._extraIntelligence = _extraIntelligence
-            this._extraMana = _extraMana
-            this._extraCriticalStrike = _extraCriticalStrike
+            this._characterName = characterName
+            this._extraLife = extraLife
+            this._extraForce = extraForce
+            this._extraSpeed = extraSpeed
+            this._extraIntelligence = extraIntelligence
+            this._extraMana = extraMana
+            this._extraCriticalStrike = extraCriticalStrike
         }
 
     public get characterName(): string {
@@ -34,13 +31,6 @@ export class CharacterType {
     }
     public set characterName(value: string) {
         this._characterName = value
-    }
-
-    public get specialCapacity(): string {
-        return this._specialCapacity
-    }
-    public set specialCapacity(value: string) {
-        this._specialCapacity = value
     }
 
     public get extraLife(): number {

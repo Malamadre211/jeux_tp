@@ -1,82 +1,21 @@
 import { timeStamp } from "console";
 import { Arme } from "../Arme";
 import { CharacterType } from "../characterType";
-
-// export class OldViking {
-
-//     public nom: string
-//     public sante: number
-//     private santeInitiale: number
-//     private _force: number
-//     private arme: Arme
-//     private defense: number
-
-//     constructor(
-//         nom: string,
-//         sante: number,
-//         santeInitiale: number,
-//         force: number,
-//         arme: Arme,
-//         defense: number
-//     ) {
-//         this.nom = nom
-//         this.sante = sante
-//         this.santeInitiale = santeInitiale
-//         this._force = force
-//         this.arme = arme
-//         this.defense = defense
-//     }
-
-//     public fight(otherViking: OldViking) {
-//         const attackValue = this.getAttackValue()
-//         const soinsValue = this.getHealedValueFromAttaque(attackValue)
-//         otherViking.receiveAttack(attackValue)
-//         this.heal(soinsValue)
-//     }
-
-//     public get force(): number {
-//         return this._force + this.arme.force
-//     }
-
-//     private getAttackValue(): number {
-//         let attackValue = this.force
-//         if(Math.random() < 0.1) {
-//             attackValue *= 2
-//         }
-//         return attackValue
-//     }
-
-//     private getHealedValueFromAttaque(attaqueValue: number): number {
-//         let soinsValue = 0
-//         if(this.arme.isLameDeSang()){
-//             soinsValue = Math.floor(attaqueValue * 0.13)
-//         }
-//         return soinsValue
-//     }
-
-//     private heal(amount: number) {
-//         this.sante += amount
-//         if(this.sante > this.santeInitiale) {
-//             this.sante = this.santeInitiale
-//         }
-//     }
-
-//     private receiveAttack(amount: number){
-//         let totalLifeToLose = amount - this.defense
-//         if(totalLifeToLose > 0) {
-//             this.sante -= totalLifeToLose
-//         }
-//         if(this.sante < 0) {
-//             this.sante = 0
-//         }
-//     }
-
-// }
+import { Personnage } from "../personnage";
 
 export class Viking extends  CharacterType {
      
-constructor(){
-    super('Viking', 'Vol de vie', 25, 4, 2, 0, 0, 0.08)
+constructor(
+    _characterName : string = "Viking",
+    _extraLife: number = 25,
+    _extraForce: number = 4,
+    _extraSpeed : number = 2,
+    _extraIntelligence : number = 0,
+    _extraMana : number = 0,
+    _extraCriticalStrike : number = 0.08
+){
+
+    super(_characterName, _extraLife, _extraForce, _extraSpeed, _extraIntelligence, _extraMana, _extraCriticalStrike)
 }
       
 }
