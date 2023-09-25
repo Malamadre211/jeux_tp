@@ -11,6 +11,7 @@ export class Personnage{
     private _startSpeed: number = 10 
     private _startIntelligence: number = 10 
     private _startCriticalStrike: number = 0.02
+    public degats = 0
 
     public get name(): string {
         return this._name
@@ -82,7 +83,7 @@ export class Personnage{
     }
 
     public get life() {
-        return this._startLife + this._characterType.extraLife
+        return this._startLife + this._characterType.extraLife - this.degats
     }
 
     public get mana(){
@@ -118,4 +119,7 @@ export class Personnage{
         this._startCriticalStrike = startCriticalStrike
     }
     
+    isAlive(){
+        return this.life > 0
+    }
 }

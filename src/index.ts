@@ -1,13 +1,15 @@
+import { Magicien } from "./characterType/Magicien"
 import { Viking } from "./characterType/Viking"
-import { Combat } from "./Combat"
-import { Arme } from "./Arme"
-import { CharacterType } from "./characterType"
 import { Personnage } from "./personnage"
+import { CombatHandler } from "./Combat"
 
 
 
 
-const vikingDeNorvege = new Viking('V de Norvege')
-const monperso = new Personnage('Harold', vikingDeNorvege)
+const vikingDeNorvege = new Viking('Harold')
+const character1 = new Personnage('Harold', vikingDeNorvege)
+
+const magicienMerlin = new Magicien('Merlin')
+const character2 = new Personnage('Merlin', magicienMerlin)
 
 

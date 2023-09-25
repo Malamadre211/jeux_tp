@@ -1,3 +1,6 @@
+import { Personnage } from "./personnage"
+
+
 export class CharacterType {
     private _characterName: string = ""
     private _extraLife: number = 0
@@ -25,6 +28,7 @@ export class CharacterType {
             this._extraMana = extraMana
             this._extraCriticalStrike = extraCriticalStrike
         }
+
 
     public get characterName(): string {
         return this._characterName
